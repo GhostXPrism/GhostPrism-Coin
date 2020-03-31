@@ -1,0 +1,81 @@
+policy_module(ghost_prism, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type ghost_prism_t;
+type ghost_prism_exec_t;
+init_daemon_domain(ghost_prism_t, ghost_prism_exec_t)
+
+permissive ghost_prism_t;
+
+type ghost_prism_initrc_exec_t;
+init_script_file(ghost_prism_initrc_exec_t)
+
+type ghost_prism_conf_t;
+files_type(ghost_prism_conf_t)
+
+type ghost_prism_var_lib_t;
+files_type(ghost_prism_var_lib_t)
+
+type ghost_prism_var_run_t;
+files_type(ghost_prism_var_run_t)
+
+type ghost_prism_port_t;
+corenet_port(ghost_prism_port_t)
+
+########################################
+#
+# ghost_prism local policy
+#
+allow ghost_prism_t self:process { fork };
+
+allow ghost_prism_t self:fifo_file rw_fifo_file_perms;
+allow ghost_prism_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(ghost_prism_t, ghost_prism_conf_t, ghost_prism_conf_t)
+manage_files_pattern(ghost_prism_t, ghost_prism_conf_t, ghost_prism_conf_t)
+
+manage_dirs_pattern(ghost_prism_t, ghost_prism_var_lib_t, ghost_prism_var_lib_t)
+manage_files_pattern(ghost_prism_t, ghost_prism_var_lib_t, ghost_prism_var_lib_t)
+files_var_lib_filetrans(ghost_prism_t, ghost_prism_var_lib_t, { dir file })
+
+manage_dirs_pattern(ghost_prism_t, ghost_prism_var_run_t, ghost_prism_var_run_t)
+manage_files_pattern(ghost_prism_t, ghost_prism_var_run_t, ghost_prism_var_run_t)
+
+sysnet_dns_name_resolve(ghost_prism_t)
+corenet_all_recvfrom_unlabeled(ghost_prism_t)
+
+allow ghost_prism_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(ghost_prism_t)
+corenet_tcp_sendrecv_generic_node(ghost_prism_t)
+corenet_tcp_sendrecv_all_ports(ghost_prism_t)
+corenet_tcp_bind_generic_node(ghost_prism_t)
+
+gen_require(`
+    type ghost_prism_port_t;
+')
+allow ghost_prism_t ghost_prism_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type ghost_prism_port_t;
+')
+allow ghost_prism_t ghost_prism_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(ghost_prism_t)
+
+files_read_etc_files(ghost_prism_t)
+
+miscfiles_read_localization(ghost_prism_t)
+
+sysnet_dns_name_resolve(ghost_prism_t)
+
+allow ghost_prism_t ghost_prism_exec_t:file execute_no_trans;
+allow ghost_prism_t self:process setsched;
+corecmd_exec_ls(ghost_prism_t)
+corenet_tcp_connect_http_port(ghost_prism_t)
+dev_read_urand(ghost_prism_t)
+fs_getattr_xattr_fs(ghost_prism_t)
+kernel_read_system_state(ghost_prism_t)

@@ -1,0 +1,8 @@
+/usr/bin/ghost_prism-cli		--	gen_context(system_u:object_r:ghost_prism_exec_t,s0)
+/usr/sbin/ghost_prismd		--	gen_context(system_u:object_r:ghost_prism_exec_t,s0)
+/usr/lib(64)?/ghost_prism/ghost_prismd		--	gen_context(system_u:object_r:ghost_prism_exec_t,s0)
+
+/etc/ghost_prism(/.*)?		gen_context(system_u:object_r:ghost_prism_conf_t,s0)
+/var/lib/ghost_prism(/.*)?		gen_context(system_u:object_r:ghost_prism_var_lib_t,s0)
+
+(/var)?/run/ghost_prismd(/.*)?   gen_context(system_u:object_r:ghost_prism_var_run_t,s0)

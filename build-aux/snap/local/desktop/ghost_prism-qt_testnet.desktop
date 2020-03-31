@@ -1,0 +1,15 @@
+# http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-1.0.html
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=GHOST PRISM Coin
+Comment=GHOST PRISM Coin QT test network
+GenericName=GHOST_PRISM Digital Currency QT client testnet network
+Exec=ghost_prism-core.qt-testnet %u
+Terminal=false
+Type=Application
+Icon=${SNAP}/share/pixmaps/ghost_prism_testnet.png
+MimeType=x-scheme-handler/ghost;
+Categories=X-Office;X-Finance;
+Keywords=internet;ghost_prism;tghost;core;wallet;qt;testnet;snap;launchpad;crypto;digital;currency;coin;token;
+Version=1.0

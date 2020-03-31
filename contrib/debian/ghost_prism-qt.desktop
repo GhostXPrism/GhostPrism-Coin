@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=GHOST PRISM Coin
+Comment=GHOST_PRISM P2P Cryptocurrency
+Comment[fr]=GHOST_PRISM, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=GHOST_PRISM, eşten eşe kriptografik sanal para birimi
+Exec=ghost_prism-qt %u
+Terminal=false
+Type=Application
+Icon=ghost_prism128
+MimeType=x-scheme-handler/ghost_prism;
+Categories=Office;Finance;
+StartupWMClass=Ghost_Prism-qt

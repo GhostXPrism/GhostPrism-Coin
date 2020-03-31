@@ -1,0 +1,37 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/ghost_prism_bg.qm</file>
+        <file alias="ca">locale/ghost_prism_ca.qm</file>
+        <file alias="cs">locale/ghost_prism_cs.qm</file>
+        <file alias="da">locale/ghost_prism_da.qm</file>
+        <file alias="de">locale/ghost_prism_de.qm</file>
+        <file alias="en">locale/ghost_prism_en.qm</file>
+        <file alias="en_GB">locale/ghost_prism_en_GB.qm</file>
+        <file alias="en_US">locale/ghost_prism_en_US.qm</file>
+        <file alias="eo">locale/ghost_prism_eo.qm</file>
+        <file alias="es">locale/ghost_prism_es.qm</file>
+        <file alias="es_ES">locale/ghost_prism_es_ES.qm</file>
+        <file alias="fi">locale/ghost_prism_fi.qm</file>
+        <file alias="fr_FR">locale/ghost_prism_fr_FR.qm</file>
+        <file alias="hi_IN">locale/ghost_prism_hi_IN.qm</file>
+        <file alias="hr">locale/ghost_prism_hr.qm</file>
+        <file alias="hr_HR">locale/ghost_prism_hr_HR.qm</file>
+        <file alias="it">locale/ghost_prism_it.qm</file>
+        <file alias="ja">locale/ghost_prism_ja.qm</file>
+        <file alias="ko_KR">locale/ghost_prism_ko_KR.qm</file>
+        <file alias="lt_LT">locale/ghost_prism_lt_LT.qm</file>
+        <file alias="nl">locale/ghost_prism_nl.qm</file>
+        <file alias="pl">locale/ghost_prism_pl.qm</file>
+        <file alias="pt">locale/ghost_prism_pt.qm</file>
+        <file alias="pt_BR">locale/ghost_prism_pt_BR.qm</file>
+        <file alias="ro_RO">locale/ghost_prism_ro_RO.qm</file>
+        <file alias="ru">locale/ghost_prism_ru.qm</file>
+        <file alias="sk">locale/ghost_prism_sk.qm</file>
+        <file alias="sv">locale/ghost_prism_sv.qm</file>
+        <file alias="tr">locale/ghost_prism_tr.qm</file>
+        <file alias="uk">locale/ghost_prism_uk.qm</file>
+        <file alias="vi">locale/ghost_prism_vi.qm</file>
+        <file alias="zh_CN">locale/ghost_prism_zh_CN.qm</file>
+        <file alias="zh_TW">locale/ghost_prism_zh_TW.qm</file>
+    </qresource>
+</RCC>

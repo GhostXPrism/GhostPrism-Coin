@@ -1,0 +1,11 @@
+[Protocol]
+exec=ghost_prism-qt '%u'
+protocol=ghost_prism
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

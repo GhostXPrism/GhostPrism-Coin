@@ -1,0 +1,3 @@
+usr/local/bin/ghost_prismd usr/bin
+usr/local/bin/ghost_prism-cli usr/bin
+debian/examples/ghost_prism.conf etc/ghost_prism
