@@ -93,11 +93,15 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
 	(2547, uint256("0x766b32936862feac5643be53e0022d1f1d00f2dd2f5a1f728fba5fb57e5e05ec"))
 	(3339, uint256("0x53d785b6a8825f5a64bd834a72e2dc07ce22a4bbf5c9bdb5701b82b21d018fab"))
 	(4087, uint256("0xc103879767efa0e9b1e51b635583af6e18c2a3abd7f114f0dc38b5222f39a27e"))
+	(12458, uint256("0x778e9b77bde4937b19e15b14c68993cc69f773ca7e3978668f07dc9ff88ce299"))
+	(55124, uint256("0x29724ce4714ac3c165f73433c4be0fe63912d4557dacc8d0b79e739c96176a04"))
+	(87521, uint256("0xf17627b030c3c1001949fbac50e7adb8f0ef0946edbe02781be9c689787c36d6"))
+	(102799, uint256("0x2016e382055d54c0fab875387a270c533dfecbaf6f4b7913b96f006b4ff20720"))
 	;
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-	1585540080, // * UNIX timestamp of last checkpoint block
-	8180,    // * total number of transactions between genesis and last checkpoint
+	1591611705, // * UNIX timestamp of last checkpoint block
+	205833,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     1400        // * estimated number of transactions per day after checkpoint
 };
@@ -187,6 +191,24 @@ public:
         pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xe7;
         nDefaultPort = 2320;
+
+
+		/////////////////////////////////////////////////////////////////////////////
+		//uint32_t nNonce = 0;
+		//while (genesis.GetHash() > consensus.powLimit) {
+		//	nNonce++;
+		//	genesis = CreateGenesisBlock(1585299600, nNonce, 0x1e0ffff0, 1, 0);
+		//}
+		////(uint32_t nTimeTx, uint32_t nTimeBlock, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
+		//genesis = CreateGenesisBlock(1585299600, nNonce, 0x1e0ffff0, 1, 0);
+		//LogPrintf("Genesis Found : %s", genesis.ToString().c_str());
+		//consensus.hashGenesisBlock = genesis.GetHash();
+		/////////////////////////////////////////////////////////////////////////////
+
+		////genesis = CreateGenesisBlock(1585299600, 185319, 0x1e0ffff0, 1, 0 * COIN);
+		////consensus.hashGenesisBlock = genesis.GetHash();
+		////assert(consensus.hashGenesisBlock == uint256("0x00000e398997f463fbe1ecd511be091d56aa2b0beed37673fb95f0478d069402"));
+		////assert(genesis.hashMerkleRoot == uint256("0xaff6f60625e6d8ef101d9103c5b5ab69989d9b5d84df5fd7ffeba36d8bc985f3"));
 
 
         // Note that of those with the service bits flag, most only support a subset of possible options
